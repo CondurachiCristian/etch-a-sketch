@@ -11,14 +11,13 @@ body {
     width: 80%;
 }
 
-.square {
+.squares {
     background-color: red;
     flex: 1 0 6%;
-    /*border: 1px solid ;*/
     height: 0;
     padding-bottom: 6%;
 }
 
-div.square:hover {
+div.newSquares {
     background-color: green;
 }
