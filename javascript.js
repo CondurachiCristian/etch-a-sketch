@@ -11,13 +11,12 @@ function makeDivs (times) {
 
 makeDivs(256);
 
-function changeClass (hoveredDiv) {
-    hoveredDiv.classList.remove("squares");
-    hoveredDiv.classList.add("newSquares");
+function onHoverItem () {
+    console.log(this.id);
+    document.querySelector(`#${this.id}`).classList.remove("squares");
+    document.querySelector(`#${this.id}`).classList.add("newSquares");
 };
 
-/* const divs = document.querySelector("#div");
-divs.addEventListener("mouseover", function () {
-    divs.classList.remove("square");
-    divs.classList.add("newSquare");
-}); */
+const divs = document.querySelectorAll("#container > div");
+divs.forEach((item) => item.addEventListener("mouseover", onHoverItem)
+);
